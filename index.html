@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Project: Homepage</title>
+    <title>The Evolution of Web Architectures</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="subtopic1.html">Subtopic 1</a></li>
-                <li><a href="subtopic2.html">Subtopic 2</a></li>
-                <li><a href="concepts.html">Key Concepts</a></li>
-                <li><a href="references.html">References</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="matrix-nav">
+        <div class="nav-brand">TechMatrix</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-active">Home</a>
+            <a href="about.html">About Project</a>
+            <a href="concepts.html">Key Concepts</a>
+            <a href="subtopic1.html">Frontend Frameworks</a>
+            <a href="subtopic2.html">Edge Computing</a>
+            <a href="references.html">References</a>
+            <a href="quiz.html">Knowledge Matrix</a>
+        </div>
+    </nav>
 
-    <main class="container">
-        <section class="main-content">
+    <main class="matrix-wrapper">
+        <header class="matrix-header">
             <h1>Research Title: The Evolution of Web Architectures</h1>
-            
-            <h3>Abstract & Introduction</h3>
-            <p>Welcome to my web development project workspace. This platform presents a multi-page breakdown investigating core modern architectural patterns, client-side lifecycle frameworks, and decoupled infrastructure models.</p>
+        </header>
+
+        <section class="matrix-card">
+            <legend class="matrix-legend">Abstract & Introduction</legend>
+            <p class="matrix-prompt">Welcome to my web development project workspace. This platform presents a multi-page breakdown investigating core modern architectural patterns, client-side lifecycle frameworks, and decoupled infrastructure models.</p>
             
             <h3>Key Project Focus areas</h3>
             <ul>
@@ -37,14 +39,14 @@
             <h3>Table of Contents</h3>
             <p>Navigate through the sections of this research project using the main floating menu above, or use the structural roadmap below:</p>
             <ol>
-                <li><a href="subtopic1.html" style="color: #00b4d8; text-decoration: underline;">Section 1: Frontend Framework Evolution</a></li>
-                <li><a href="subtopic2.html" style="color: #00b4d8; text-decoration: underline;">Section 2: Edge Computing & Decoupled Backends</a></li>
+                <li><a href="subtopic1.html">Section 1: Frontend Framework Evolution</a></li>
+                <li><a href="subtopic2.html">Section 2: Edge Computing & Decoupled Backends</a></li>
             </ol>
         </section>
     </main>
 
-    <footer id="class-project-footer">
-        <p>This website is a class project for IT 3203. Visit the official <a href="https://ksuweb.github.io/IT3203/" target="_blank">Class Website</a>.</p>
+    <footer>
+        <p style="text-align: center; margin-top: 40px; color: var(--text-muted);">This website is a class project for IT 3203. Visit the official Class Website.</p>
     </footer>
 
 </body>
