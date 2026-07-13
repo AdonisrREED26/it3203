@@ -287,5 +287,53 @@ h1 {
     border-radius: 8px;
     margin-bottom: 20px;
     font-size: 1.1rem;
+
+
+   /* ==========================================================================
+   UNIFIED MATRIX NAVIGATION FLEXBOX SYSTEM
+   ========================================================================== */
+.matrix-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 50px; /* Recreates your elegant floating pill look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--accent-emerald); /* Gives your brand name your green accent */
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-emerald);
+}
+
+/* Active Page Highlight Rule */
+.nav-links a.nav-active {
+    color: var(--accent-emerald);
+    font-weight: bold;
+}
     color: var(--text-main);
 }
