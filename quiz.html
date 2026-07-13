@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Tech Matrix Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="matrix-nav">
+        <div class="nav-brand">TechMatrix</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Project</a>
+            <a href="concepts.html">Key Concepts</a>
+            <a href="subtopic1.html">Frontend Frameworks</a>
+            <a href="subtopic2.html">Edge Computing</a>
+            <a href="references.html">References</a>
+            <a href="quiz.html" class="nav-active">Knowledge Matrix</a>
+        </div>
+    </nav>
+
+    <main class="matrix-wrapper">
+        <header class="matrix-header">
+            <h1>Knowledge Matrix Evaluation</h1>
+            <p>Verify your understanding of decentralized edge nodes and modern frontend compilation paradigms.</p>
+        </header>
+        
+        <form id="matrixQuizEngine">
+            <fieldset class="matrix-card" data-qtype="fill-blank">
+                <legend class="matrix-legend">Parameter 01: Decentralized Architecture</legend>
+                <p class="matrix-prompt">What specific computing paradigm optimizes network data processing by performing computational operations at the network perimeter edge?</p>
+                <input type="text" id="param_edge_compute" name="param_edge_compute" placeholder="Input terminology..." required autocomplete="off">
+            </fieldset>
+
+            <fieldset class="matrix-card" data-qtype="single-select">
+                <legend class="matrix-legend">Parameter 02: Ecosystem Control</legend>
+                <p class="matrix-prompt">Which component-driven frontend Javascript infrastructure is actively sustained by Meta Engineering?</p>
+                <div class="matrix-options">
+                    <label class="matrix-radio"><input type="radio" name="param_meta_fw" value="React" required> <span>React Engine</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_meta_fw" value="Django"> <span>Django Framework</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_meta_fw" value="Laravel"> <span>Laravel Suite</span></label>
+                </div>
+            </fieldset>
+
+            <fieldset class="matrix-card" data-qtype="single-select">
+                <legend class="matrix-legend">Parameter 03: Architectural Optimization</legend>
+                <p class="matrix-prompt">What critical technical roadblock is heavily alleviated when opting for Edge Computing over standard remote single-point Cloud setups?</p>
+                <div class="matrix-options">
+                    <label class="matrix-radio"><input type="radio" name="param_edge_benefit" value="high-latency" required> <span>Severe Packet Latency</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_edge_benefit" value="local-storage"> <span>Absence of Physical Node Chassis</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_edge_benefit" value="low-cost"> <span>Degraded Server Longevity</span></label>
+                </div>
+            </fieldset>
+
+            <fieldset class="matrix-card" data-qtype="single-select">
+                <legend class="matrix-legend">Parameter 04: Compilation Mechanics</legend>
+                <p class="matrix-prompt">Which frontend ecosystem shifts compilation work to build time, removing the overhead of an in-browser Virtual DOM?</p>
+                <div class="matrix-options">
+                    <label class="matrix-radio"><input type="radio" name="param_compile_style" value="Angular" required> <span>Angular Platform</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_compile_style" value="Svelte"> <span>Svelte Compiler</span></label>
+                    <label class="matrix-radio"><input type="radio" name="param_compile_style" value="Vue"> <span>Vue Runtime</span></label>
+                </div>
+            </fieldset>
+
+            <fieldset class="matrix-card" data-qtype="multi-select">
+                <legend class="matrix-legend">Parameter 05: Framework Utilities</legend>
+                <p class="matrix-prompt">Identify the verified systemic advantages achieved when migrating interfaces into modern web frameworks. (Select ALL valid options)</p>
+                <div class="matrix-options">
+                    <label class="matrix-checkbox"><input type="checkbox" name="param_benefits" value="reusable"> <span>Highly modular component layouts</span></label>
+                    <label class="matrix-checkbox"><input type="checkbox" name="param_benefits" value="state"> <span>Predictable reactive application states</span></label>
+                    <label class="matrix-checkbox"><input type="checkbox" name="param_benefits" value="database"> <span>Native backend relational database setup</span></label>
+                </div>
+            </fieldset>
+
+            <div class="matrix-controls">
+                <button type="submit" id="engineEvaluate" class="m-btn btn-eval">Evaluate Matrix</button>
+                <button type="button" id="engineWipe" class="m-btn btn-wipe">Wipe Form Inputs</button>
+            </div>
+        </form>
+
+        <section id="matrixOutputPanel" class="matrix-output display-barrier">
+            <h2>Evaluation Diagnostics</h2>
+            <div id="matrixScoreSummary"></div>
+            <div id="matrixDiagnosticStream"></div>
+        </section>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
