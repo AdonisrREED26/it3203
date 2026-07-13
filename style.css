@@ -1,13 +1,13 @@
 /* ==========================================================================
-   THEME: TECH MINIMALIST NOIR (UNIQUE DESIGN)
+   THEME: TECH MINIMALIST NOIR (RECONCILED DESIGN SYSTEM)
    ========================================================================== */
 :root {
     --bg-global: #fafafa;        /* Off-white canvas */
-    --surface-card: #ffffff;    /* Pure white content cards */
-    --text-main: #111111;       /* Deep charcoal for heavy contrast */
-    --text-muted: #666666;      /* Slate gray for secondary text */
-    --accent-emerald: #00b4d8;  /* Clean, vibrant tech teal/emerald */
-    --border-color: #e5e5e5;    /* Razor thin light borders */
+    --surface-card: #ffffff;     /* Pure white content cards */
+    --text-main: #111111;        /* Deep charcoal for heavy contrast */
+    --text-muted: #666666;       /* Slate gray for secondary text */
+    --accent-emerald: #00b4d8;   /* Clean, vibrant tech teal/emerald */
+    --border-color: #e5e5e5;     /* Razor thin light borders */
     --font-premium: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -20,20 +20,25 @@ body {
     padding: 0;
 }
 
-/* ==========================================================================
-   LAYOUT: FLOATING ISLAND NAVIGATION (FLEXBOX)
-   ========================================================================== */
 header {
     padding: 30px 20px 10px 20px;
 }
 
-.navbar {
+a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* ==========================================================================
+   UNIFIED MATRIX NAVIGATION FLEXBOX SYSTEM
+   ========================================================================== */
+.matrix-nav {
     display: flex; /* Requirement: Layout implementing CSS Flexbox/Grid */
-    justify-content: center;
-    gap: 25px;
-    list-style: none;
-    max-width: 700px;
-    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 12px 25px;
     background: var(--surface-card);
     border: 1px solid var(--border-color);
@@ -41,106 +46,42 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-/* Requirement: Selector Type 1 - Element Selector */
-a {
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--accent-emerald);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.25s ease;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
-/* Requirement: Hover effect on links */
-a:hover {
+.nav-links a:hover {
     color: var(--accent-emerald);
-    transform: translateY(-1px);
+}
+
+/* Active Highlight Setup */
+.nav-links a.nav-active {
+    color: var(--accent-emerald);
+    font-weight: bold;
 }
 
 /* ==========================================================================
-   Requirement: Selector Type 2 - Class Selectors & Main Content Card
-   ========================================================================== */
-.container {
-    max-width: 900px;
-    margin: 40px auto; /* Requirement: Padding & Margins */
-    padding: 0 20px;
-}
-
-.main-content {
-    background: var(--surface-card);
-    padding: 50px; /* Premium generous padding */
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-}
-
-h1, h2, h3 {
-    letter-spacing: -0.03em; /* Sleek editorial font spacing */
-    color: var(--text-main);
-}
-
-h1 {
-    font-size: 2.5rem;
-    border-left: 4px solid var(--accent-emerald); /* Unique accent bar */
-    padding-left: 15px;
-}
-
-/* Unique Grid Matrix Layout for Tables/Data lists */
-.data-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 30px 0;
-    border: 1px solid var(--border-color); /* Requirement: Borders */
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.data-table th {
-    background-color: #111111; /* Dark header block */
-    color: #ffffff;
-    font-weight: 600;
-    padding: 16px;
-    text-align: left;
-}
-
-.data-table td {
-    padding: 16px;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--surface-card);
-}
-
-.concept-term {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-top: 25px;
-    display: block;
-    border-bottom: 1px dashed var(--accent-emerald); /* Unique dashed accent underline */
-    padding-bottom: 4px;
-}
-
-/* ==========================================================================
-   Requirement: Selector Type 3 - ID Selector
-   ========================================================================== */
-#class-project-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border-color);
-    margin-top: 80px;
-    background-color: #ffffff;
-}
-
-#class-project-footer a {
-    color: var(--text-main);
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-
-/* ==========================================================================
-   MATRIX QUIZ EXTENSION (MATCHED TO MINIMALIST NOIR THEME)
+   MATRIX QUIZ EXTENSION & INTERACTIVE INTERFACE
    ========================================================================== */
 .matrix-wrapper {
     max-width: 800px;
@@ -161,14 +102,14 @@ h1 {
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Matched to your navbar shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .matrix-legend {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--accent-emerald); /* Using your custom green/emerald accent variable */
+    color: var(--accent-emerald);
     padding: 0 10px;
     font-weight: bold;
 }
@@ -189,13 +130,14 @@ h1 {
     border: 1px solid var(--border-color);
     color: var(--text-main);
     border-radius: 8px;
+    box-sizing: border-box;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #param_edge_compute:focus {
     border-color: var(--accent-emerald);
     outline: none;
-    box-shadow: 0 0 12px rgba(11, 180, 216, 0.2);
+    box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
 }
 
 .matrix-options label {
@@ -237,7 +179,7 @@ h1 {
     background: var(--accent-emerald);
     color: #fff;
     border: none;
-    box-shadow: 0 4px 14px rgba(11, 180, 216, 0.3);
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.3);
 }
 
 .btn-eval:hover {
@@ -287,53 +229,5 @@ h1 {
     border-radius: 8px;
     margin-bottom: 20px;
     font-size: 1.1rem;
-
-
-   /* ==========================================================================
-   UNIFIED MATRIX NAVIGATION FLEXBOX SYSTEM
-   ========================================================================== */
-.matrix-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 12px 25px;
-    background: var(--surface-card);
-    border: 1px solid var(--border-color);
-    border-radius: 50px; /* Recreates your elegant floating pill look */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-}
-
-.nav-brand {
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    color: var(--accent-emerald); /* Gives your brand name your green accent */
-    text-transform: uppercase;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: var(--accent-emerald);
-}
-
-/* Active Page Highlight Rule */
-.nav-links a.nav-active {
-    color: var(--accent-emerald);
-    font-weight: bold;
-}
     color: var(--text-main);
 }
