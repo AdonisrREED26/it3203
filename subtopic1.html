@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- REQUIRED for Milestone 3: Responsive Viewport Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subtopic 1: Frontend Frameworks</title>
     <link rel="stylesheet" href="style.css">
@@ -10,11 +11,16 @@
 
     <header>
         <nav>
-            <ul class="navbar">
+            <!-- REQUIRED for Milestone 3: Mobile Hamburger Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+
+            <!-- Added id="nav-menu" for JS toggle support on mobile screens -->
+            <ul class="navbar" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="subtopic1.html">Subtopic 1</a></li>
                 <li><a href="subtopic2.html">Subtopic 2</a></li>
                 <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="references.html">References</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -30,32 +36,35 @@
             <h3>Core Framework Comparison</h3>
             <p>Below is a structured layout comparing the architecture and DOM management patterns of prominent modern frameworks:</p>
 
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Framework/Library</th>
-                        <th>Architecture Type</th>
-                        <th>DOM Management Style</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>React</td>
-                        <td>Component-Based / Library</td>
-                        <td>Virtual DOM replication</td>
-                    </tr>
-                    <tr>
-                        <td>Angular</td>
-                        <td>Full-featured MVC Model</td>
-                        <td>Incremental DOM compilation</td>
-                    </tr>
-                    <tr>
-                        <td>Vue</td>
-                        <td>Progressive Hybrid Structure</td>
-                        <td>Reactive Virtual DOM proxy</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- REQUIRED for Milestone 3: Overflow Wrapper for Table Responsiveness -->
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Framework/Library</th>
+                            <th>Architecture Type</th>
+                            <th>DOM Management Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>React</td>
+                            <td>Component-Based / Library</td>
+                            <td>Virtual DOM replication</td>
+                        </tr>
+                        <tr>
+                            <td>Angular</td>
+                            <td>Full-featured MVC Model</td>
+                            <td>Incremental DOM compilation</td>
+                        </tr>
+                        <tr>
+                            <td>Vue</td>
+                            <td>Progressive Hybrid Structure</td>
+                            <td>Reactive Virtual DOM proxy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h3>Key Structural Takeaways</h3>
             <ul>
@@ -70,5 +79,7 @@
         <p>This website is a class project for IT 3203. Visit the official <a href="https://ksuweb.github.io/IT3203/" target="_blank">Class Website</a>.</p>
     </footer>
 
+    <!-- REQUIRED for Milestone 3: Link to JS for Mobile Menu functionality -->
+    <script src="quiz.js"></script>
 </body>
 </html>
