@@ -1,3 +1,19 @@
+// MILESTONE 3: Mobile Navigation Toggle Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      // Toggles the 'active' class on the menu to show/hide it
+      navMenu.classList.toggle('active');
+    });
+  }
+});
+
+// ... YOUR EXISTING QUIZ LOGIC REMAINS BELOW THIS ...
+
+
 // Unique variable naming paradigm and tracking matrix
 const MATRIX_ANSWER_SCHEMATIC = {
     fillQuestion: "edge computing",
