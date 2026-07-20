@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- REQUIRED for Milestone 3: Responsive Viewport Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Project: Key Concepts</title>
     <!-- Links directly to your style.css file in the same folder -->
@@ -12,11 +13,16 @@
     <!-- Consistent Floating Pill Menu Navigation -->
     <header>
         <nav>
-            <ul class="navbar">
+            <!-- REQUIRED for Milestone 3: Mobile Hamburger Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+
+            <!-- Added id="nav-menu" for JS toggle support on mobile screens -->
+            <ul class="navbar" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="subtopic1.html">Subtopic 1</a></li>
                 <li><a href="subtopic2.html">Subtopic 2</a></li>
                 <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="references.html">References</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -58,5 +64,7 @@
         <p>This website is a class project for IT 3203. Visit the official <a href="https://ksuweb.github.io/IT3203/" target="_blank">Class Website</a>.</p>
     </footer>
 
+    <!-- REQUIRED for Milestone 3: Link to JS for Mobile Menu functionality -->
+    <script src="quiz.js"></script>
 </body>
 </html>
