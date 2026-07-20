@@ -1,0 +1,20 @@
+# IT 3203 - Milestone #3 Project Report
+
+## 1. Design Principles & Best Practices
+- **Responsive Viewport Configuration:** Utilized `<meta name="viewport" content="width=device-width, initial-scale=1.0">` across all pages to ensure proper auto-scaling on mobile devices.
+- **Mobile-First Touch Architecture:** Implemented a lightweight CSS media query system that converts the horizontal navigation bar into a touch-friendly vertical toggle menu (`#menu-toggle`) on screens narrower than `768px`.
+- **Flexible Card & Matrix Layouts:** Designed content blocks and fieldsets using fluid CSS containers and wrapped data tables in horizontal scroll containers (`.table-wrapper`) to prevent overflow or horizontal page clipping on smaller screens.
+- **Semantic Structure & Accessibility:** Structured pages using semantic HTML5 elements (`<nav>`, `<main>`, `<fieldset>`, `<legend>`) with `aria-label` attributes on interactive toggle buttons.
+
+## 2. Testing Conditions & Results
+- **Emulated Viewports:** Tested across standard device profiles using Google Chrome Developer Tools:
+  - iPhone SE ($375\text{px} \times 667\text{px}$)
+  - iPhone 12/13/14 Pro ($390\text{px} \times 844\text{px}$)
+  - iPad Mini ($768\text{px} \times 1024\text{px}$)
+- **Physical Device Testing:** Verified touch interaction, navigation menu expansion, and quiz evaluation form execution on a live physical mobile device via GitHub Pages (`https://adonisrreed26.github.io/it3203/`).
+- **Results:**
+  - Hamburger toggle expanded and collapsed reliably across all 7 subpages.
+  - Form validation, script execution (`quiz.js`), and reset handlers ran without console errors across both mobile and desktop views.
+
+## 3. Screenshots & Supporting Evidence
+*(Attach your mobile screenshots here or include image links from your repository)*
