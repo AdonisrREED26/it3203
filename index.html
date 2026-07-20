@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- REQUIRED for Milestone 3: Responsive Viewport Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Evolution of Web Architectures</title>
     <link rel="stylesheet" href="style.css">
@@ -10,7 +11,12 @@
 
     <nav class="matrix-nav">
         <div class="nav-brand">TechMatrix</div>
-        <div class="nav-links">
+        
+        <!-- REQUIRED for Milestone 3: Mobile Hamburger Toggle Button -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        
+        <!-- Added id="nav-menu" for JS toggle support on mobile screens -->
+        <div class="nav-links" id="nav-menu">
             <a href="index.html" class="nav-active">Home</a>
             <a href="about.html">About Project</a>
             <a href="concepts.html">Key Concepts</a>
@@ -49,5 +55,7 @@
         <p style="text-align: center; margin-top: 40px; color: var(--text-muted);">This website is a class project for IT 3203. Visit the official Class Website.</p>
     </footer>
 
+    <!-- REQUIRED for Milestone 3: Link to JS for Mobile Menu functionality -->
+    <script src="quiz.js"></script>
 </body>
 </html>
