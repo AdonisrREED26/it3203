@@ -231,3 +231,125 @@ a {
     font-size: 1.1rem;
     color: var(--text-main);
 }
+
+
+/* ==========================================================================
+   MILESTONE 3: RESPONSIVE & MOBILE DESIGN ADDITIONS
+   ========================================================================== */
+
+/* 1. Fluid Images & Containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2. Responsive Tables (Prevents breaking layout on small screens) */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Forces horizontal scroll on mobile */
+}
+
+/* 3. Mobile First Navigation Styling */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  min-height: 44px; /* Touch target best practice */
+  min-width: 44px;
+}
+
+#nav-menu {
+  display: none; /* Hidden on mobile by default */
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f8f9fa; /* Change to match your site's color */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Class toggled by JavaScript */
+#nav-menu.active {
+  display: flex; 
+}
+
+#nav-menu li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  min-height: 44px; /* Touch target best practice */
+}
+
+/* 4. Touch Targets for Quiz Form */
+input[type="radio"], 
+input[type="checkbox"], 
+button {
+  min-height: 44px;
+  min-width: 44px;
+  margin: 0.5rem 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+/* Screen Size 1: Tablets and Up (Width >= 768px) */
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger icon */
+  }
+
+  #nav-menu {
+    display: flex !important; /* Always show horizontal menu */
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+  }
+
+  #nav-menu li a {
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Screen Size 2: Large Desktop (Width >= 1024px) */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 80%; /* Shrink container slightly for better readability */
+  }
+  
+  /* Example: If you have grids, expand them here */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
